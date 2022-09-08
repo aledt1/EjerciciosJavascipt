@@ -62,3 +62,21 @@ function numRep (c3) {
     }
 }
 console.log(numRep(conjuntoR));
+
+/*## Ejercicio #4
+Escribir una función que tome un arreglo ordenado y devuelva un arreglo completamente desordenado
+Entrada: [1, 2, 5, 14, 24, 31, 50, 105]
+Posible salida: [105, 31, 14, 1, 2, 50, 24, 5]*/
+
+let conjuntoD = [1, 2, 5, 14, 24, 31, 50, 105];
+console.log(conjuntoD);
+
+function numDes(c4){
+    let ary = new Array(); // se define un arrego vacio para definir el nuevo orden
+    for (let i = 0; iv < c4.length; i++){
+        ary[c4.length - i] = c4[i++];    // se define la posicion de los elementos desfasados a un elemento de conjuntoD
+    }
+    return ary;
+}
+console.log("nuevo conjunto");
+console.log(numDes(conjuntoD));
