@@ -1,6 +1,6 @@
 /* ## Ejercicio #1
 Escribir una función que tome un arreglo de números y devuelva el número mayor de la lista. 
-Ejemplo del arreglo : [3, 5, 7, 1, 6] */
+Ejemplo del arreglo : [3, 5, 7, 1, 6] 
 let conjuntoM = [3,5,7,1,6];
 console.log(conjuntoM);
 // se hace la comparación del arreglo con el 0 y despues del ciclo determinamos el mayor de las comparaciones
@@ -45,7 +45,7 @@ _Caso 2_: Resultado esperado: El número 7 se encuentra más de una vez
 [7, 41, 5, 7, 10, 13, 2]
 
 _Caso 3_: Resultado esperado: No hay números repetidos
-[1, 22, 5, 14, 24, 31, 27, 15, 105]*/
+[1, 22, 5, 14, 24, 31, 27, 15, 105]
 
 let conjuntoR = [1,22,5,17,10,5,40,5];
 console.log(conjuntoR);
@@ -66,7 +66,7 @@ console.log(numRep(conjuntoR));
 /*## Ejercicio #4
 Escribir una función que tome un arreglo ordenado y devuelva un arreglo completamente desordenado
 Entrada: [1, 2, 5, 14, 24, 31, 50, 105]
-Posible salida: [105, 31, 14, 1, 2, 50, 24, 5]*/
+Posible salida: [105, 31, 14, 1, 2, 50, 24, 5]
 
 let conjuntoD = [1, 2, 5, 14, 24, 31, 50, 105];
 console.log(conjuntoD);
@@ -124,7 +124,7 @@ console.log(numDes(conjuntoD));
         console.log("Válido :)| el número es menor que 100");
     } else{
         console.log("Inválido :( | el número es mayor de 100");
-    }*/
+    }
 //})
 
 //Ejercicio 5.2
@@ -151,6 +151,35 @@ boton3.addEventListener("click", function(e){
                 resultado1.innerHTML = "los números son iguales :|";
         }}}}
 })
+*/
+//ejercicio 5.3
+//Solicitar un entero (entre el 100 y el 200) y determinar si es múltiplo de 3
+let campoMultiplo = document.getElementById("multiplo");
+let botonmV = document.getElementById("btn5");
+let botonmL = document.getElementById("btn6");
+let res3 = document.getElementById("alt3");
+
+botonmV.addEventListener("click", function(e){
+    e.preventDefault();
+    console.log(campoMultiplo);
+    let m3 = parseInt(campoMultiplo.value);
+    let residuo = (m3 %= 3);
+    if (m3 <= 200){
+        campoMultiplo.classList.add("is-valid");
+        if (residuo == 0){
+            res3.innerHTML = campoMultiplo.value + " es múltiplo de 3";
+        } else{
+            res3.innerHTML = campoMultiplo.value + " no es múltiplo de 3";
+        }
+    } else{
+        campoMultiplo.classList.remove("is-valid");
+        campoMultiplo.classList.add("is-invalid");
+        res3.innerHTML = "Agregue un número entre 1 y 200";
+    }
+});
+
+
+
 
 
 
