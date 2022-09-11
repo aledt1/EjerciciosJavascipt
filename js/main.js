@@ -180,6 +180,7 @@ botonmV.addEventListener("click", function(e){
 */
 // Ejercicio 5.5
 // Elaborar un algoritmo para leer 3 números y determinar sí uno es la suma de los otros dos
+/*
 let campoS1 = document.getElementById("cmp7").value;
 let campoS2 = document.getElementById("cmp8").value;
 let campoS3 = document.getElementById("cmp9").value;
@@ -202,10 +203,24 @@ botonSL.addEventListener("click", function(e){
         res4.innerHTML = campoS3 + " es la suma de " + campoS1 + " " + campoS2;
     }
 });
+*/
+// ejercicio 5.6
+// Elabora un algoritmo para leer un número y determinar si es par o impar
+let camponumero = document.getElementById("par-im").value;
+let botonPV = document.getElementById("btn9");
+let botonPL = document.getElementById("btn10");
+let res5 = document.getElementById("alt5");
 
-
-
-
+botonPV.addEventListener("click", function(e){
+    e.preventDefault();
+    let nump = parseInt(camponumero);
+    let par = nump %= 2;
+    if (par == 0){
+        res5.innerHTML = camponumero + " es un número par";
+    } else if (par == 1){
+        res5.innerHTML = camponumero + " es un número impar";
+    }
+});
 
 
 
