@@ -83,7 +83,8 @@ console.log(numDes(conjuntoD));
 
 // Ejercicio 5.1
 //1. Solicitar 3 números (entre el 1 y el 100)  y definir cual es el mayor
-boton.addEventListener("click", function(e){
+
+/*boton.addEventListener("click", function(e){
     e.preventDefault();
     let n1 = parseInt(campo1);
     let n2 = parseInt(campo2);
@@ -124,4 +125,35 @@ boton.addEventListener("click", function(e){
     } else{
         console.log("Inválido :( | el número es mayor de 100");
     }*/
+//})
+
+//Ejercicio 5.2
+//Solicitar 3 números (entre el 1 y el 100)  y definir el menor de tres números
+let n4 = parseInt(document.getElementById("cmp4").value);
+let n5 = parseInt(document.getElementById("cmp4").value);
+let n6 = parseInt(document.getElementById("cmp4").value);
+let boton3 = document.getElementById("btn3"); // verificar
+let boton4 = document.getElementById("btn4"); // limpiar
+let resultado1 = document.getElementById("alt2");
+
+boton3.addEventListener("click", function(e){
+    e.preventDefault();
+    if ((n4 <= n5) && (n4 <= n6)){
+        resultado1.innerHTML = n4 +  "es el menor :)";
+    } else{ 
+        if ((n5 <= n4) && (n5 <= n6)){
+            resultado1.innerHTML = n5 +  "es el menor :)";
+        } else{
+           if ((n6 <= n5) && (n6 <= n4)){
+                resultado1.innerHTML = n6 + "es el menor :)";
+        } else{
+            if ((n4 == n5) && (n4 == n6)){
+                resultado1.innerHTML = "los números son iguales :|";
+        }}}}
 })
+
+
+
+
+
+
