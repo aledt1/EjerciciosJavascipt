@@ -154,7 +154,7 @@ boton3.addEventListener("click", function(e){
 */
 //ejercicio 5.3
 //Solicitar un entero (entre el 100 y el 200) y determinar si es múltiplo de 3
-let campoMultiplo = document.getElementById("multiplo");
+/*let campoMultiplo = document.getElementById("multiplo");
 let botonmV = document.getElementById("btn5");
 let botonmL = document.getElementById("btn6");
 let res3 = document.getElementById("alt3");
@@ -177,7 +177,31 @@ botonmV.addEventListener("click", function(e){
         res3.innerHTML = "Agregue un número entre 1 y 200";
     }
 });
+*/
+// Ejercicio 5.5
+// Elaborar un algoritmo para leer 3 números y determinar sí uno es la suma de los otros dos
+let campoS1 = document.getElementById("cmp7").value;
+let campoS2 = document.getElementById("cmp8").value;
+let campoS3 = document.getElementById("cmp9").value;
+let botonSV = document.getElementById("btn7");
+let botonSL = document.getElementById("btn8");
+let res4 = document.getElementById("alt4");
 
+botonSL.addEventListener("click", function(e){
+    e.preventDefault();
+    let s1 = parseInt(campoS1);
+    let s2 = parseInt(campoS2);
+    let s3 = parseInt(campoS3);
+    if ((s1 == s2) && (s1 == s3)){
+        res4.innerHTML = "es el mismo número"; 
+    } else if (s1 == (s2 + s3)){
+        res4.innerHTML = campoS1 + " es la suma de " + campoS2 + " " + campoS3;
+    } else if (s2 == (s1 + s3)){
+        res4.innerHTML = campoS2 + " es la suma de " + campoS1 + " " + campoS3;
+    } else if (s3 == (s1 + s2)){
+        res4.innerHTML = campoS3 + " es la suma de " + campoS1 + " " + campoS2;
+    }
+});
 
 
 
